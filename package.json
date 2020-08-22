@@ -1,0 +1,25 @@
+{
+  "name": "snack-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "inquirer": "^7.3.2",
+    "mysql": "^2.18.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimcredit/Snack-Time.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimcredit/Snack-Time/issues"
+  },
+  "homepage": "https://github.com/kimcredit/Snack-Time#readme"
+}
