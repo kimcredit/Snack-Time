@@ -1,0 +1,96 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+header {
+    padding: 3rem;
+}
+
+h1, h2 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+}
+
+select, input, button {
+    border: 1px;
+    border-style: solid;
+    border-radius: 15px;
+    padding: .5rem 2rem .5rem 2rem;
+    background-color: #ffeeb0;
+    border-color: #ead18a;
+}
+
+
+button {
+    background-color: #f7af2c;
+    border-color: #d69011;
+}
+
+section {
+    margin-bottom: 20px;
+    min-height: 600px;
+}
+
+ul {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+li {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    border: 1px;
+    border-style: solid;
+    border-color: #d69011;
+}
+
+.subtitle {
+    padding-bottom: 1rem;
+}
+
+.form-area {
+    display: inline;
+    
+}
+
+.row {
+    margin: 1rem;
+}
+
+#uneaten, #devoured {
+    padding: 2rem;
+}
+
+#uneaten {
+    background-color: #ffeeb0;
+    border-radius: 15px 0 0 15px;
+}
+
+#devoured {
+    background-color: #f7af2c;
+    border-radius: 0 15px 15px 0;
+}

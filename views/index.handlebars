@@ -1,22 +1,23 @@
 <header class="col-12">
-	<h1>Snack Time!</h1>
-	<h2>add a snack you want to eat</h2>
-	<form>
-		<div>
+	<h1>Snack Time</h1>
+	<h3 class="subtitle">add a snack you want to eat</h3>
+	<form class="make-snack">
+		<div class="form-area">
 			<select id="snack-types" name="Snack Types">
                 <option disabled selected>Category</option>
                 <option value="healthy">healthy</option>
                 <option value="space">junk</option>
             </select>
 		</div>
-		<div>
+		<div class="form-area">
 			<input placeholder="Snack">
 		</div>
 		<button type="submit">Add Snack</button>
 	</form>
+	<div class="alert" role="alert"></div>
 </header>
 
-<section id="uneaten" class="col-md-6 col-sm-12">
+<section id="uneaten" class="col-md-6">
 	<h2>Uneaten:</h2>
 	<ul>
 	{{#each snacks}}
@@ -27,7 +28,7 @@
 	</ul>
 </section>
 
-<section id="devoured" class="col-md-6 col-sm-12">
+<section id="devoured" class="col-md-6">
 	<h2>Devoured:</h2>
 	<ul>
 	{{#each snacks}}

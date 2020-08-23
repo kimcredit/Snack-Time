@@ -1,9 +1,9 @@
   
 <li>
-	<p>{{category}}</p>
-	<h3>{{snack}}</h3>
+	<p class="category">{{category}}</p>
+	<h3 class="snack">{{snack}}</h3>
 	
 	{{#if devoured}}
-	<a data-id="{{id}}" data-newdevoured="{{devoured}}">Devour It!</a>
+	<button class= "change-status" data-id="{{id}}" data-newdevoured="{{devoured}}">Devour It!</button>
 	{{/if}}
 </li>
