@@ -3,7 +3,7 @@ This simple application lets users add and eat their favorite snacks. Users can 
 snacks and classify if they are heathy foods or junk foods. Then they can log which 
 snacks they've eaten!
 
-<img src="images/example01.png" width="700">
+<img src="images/example01-01.png" width="700">
 
 ## Functionality 
 ```
