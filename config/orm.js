@@ -39,9 +39,6 @@ function objToSql(ob) {
 		});
 	},
 	create: (table, cols, vals, cb) => {
-        console.log("table: ", table);
-        console.log("cols: ", cols);
-        console.log("vals: ", vals);
 
         let queryString = 'INSERT INTO ' + table;
         
@@ -63,8 +60,6 @@ function objToSql(ob) {
         queryString += objToSql(objColVals); 
         queryString += ' WHERE ';
         queryString += condition;
-
-        console.log( "update query: ", queryString);
 
 		connection.query(queryString, (err, result) => {
 			if (err) throw err;

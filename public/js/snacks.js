@@ -1,35 +1,24 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-status").on("click", (event) => {
-      event.preventDefault();
-      console.log("switch status button");
-
-      const id = $(this).data("id");
-      console.log(id);
-      const newStatus = $(this).data("newstatus");
-      console.log(newStatus);
-      const newDevouredState = { devoured: newStatus };
-      $.ajax('/api/snacks/' + id, {
-          type: 'PUT',
-          data: newDevouredState
-      }).then(() => {
-          location.reload();
-      });
+  $(".change-status").on("click", function (event) {
+    event.preventDefault();
+    const id = $(this).data("id");
+    const newStatus = $(this).data("newdevoured");
+    const newDevouredState = { devoured: newStatus };
+    $.ajax('/api/snacks/' + id, {
+        type: 'PUT',
+        data: newDevouredState
+    }).then(() => {
+        location.reload();
     });
+  });
   
-    $(".make-snack").on("submit", (event) => {
+    $(".make-snack").on("submit", function (event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
-      console.log("in click event");
-
       let alert = $(".alert");
       const category = $("#category").val();
       const snack = $("#snack").val();
-
-      console.log("snacks " +  $("#snack"));
-
-      console.log(category);
-      console.log(snack);
       if (!category  && !snack) {
           alert.html("Please select a category and enter a snack :)");
       } else if (!category) {
@@ -42,12 +31,11 @@ $(function() {
             category,
             snack
           };
-          console.log(newSnack);
           $.ajax('api/snacks', {
               type: 'POST',
               data: newSnack
           }).then(() => {
-            //   location.reload();
+              location.reload();
           });
       }
     });
