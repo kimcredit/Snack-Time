@@ -3,7 +3,7 @@ This simple application lets users add and eat their favorite snacks. Users can 
 snacks and classify if they are heathy foods or junk foods. Then they can log which 
 snacks they've eaten!
 
-<img src="images/example.png" width="700">
+<img src="images/example01.png" width="700">
 
 ## Functionality 
 ```
@@ -15,6 +15,7 @@ WHEN I click 'Devour It!' on an uneaten food item
 THEN the food item is added to my 'devoured' column
 WHEN I reload the page
 THEN all of my current displayed data persists
+```
 
 ## Credits
 This App uses [MySQL](https://www.npmjs.com/package/mysql), [Express](https://www.npmjs.com/package/express), and [Express Handlebars](https://www.npmjs.com/package/express-handlebars). 
