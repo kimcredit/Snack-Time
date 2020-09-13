@@ -2,9 +2,12 @@
 $(function() {
     $(".change-status").on("click", (event) => {
       event.preventDefault();
-      
+      console.log("switch status button");
+
       const id = $(this).data("id");
+      console.log(id);
       const newStatus = $(this).data("newstatus");
+      console.log(newStatus);
       const newDevouredState = { devoured: newStatus };
       $.ajax('/api/snacks/' + id, {
           type: 'PUT',
@@ -17,10 +20,16 @@ $(function() {
     $(".make-snack").on("submit", (event) => {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
-  
+      console.log("in click event");
+
       let alert = $(".alert");
-      const category = $(".category").val().trim();
-      const snack = $(".snack").val().trim();
+      const category = $("#category").val();
+      const snack = $("#snack").val();
+
+      console.log("snacks " +  $("#snack"));
+
+      console.log(category);
+      console.log(snack);
       if (!category  && !snack) {
           alert.html("Please select a category and enter a snack :)");
       } else if (!category) {
@@ -30,14 +39,15 @@ $(function() {
       } else {
           alert.html("");
           const newSnack = {
-            category: $(".category").val().trim(),
-            snack: $(".snack").val().trim()
+            category,
+            snack
           };
+          console.log(newSnack);
           $.ajax('api/snacks', {
               type: 'POST',
               data: newSnack
           }).then(() => {
-              location.reload();
+            //   location.reload();
           });
       }
     });
